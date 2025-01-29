@@ -31,7 +31,7 @@
 
 ## 🚨 Tutorial
 
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>. 
+This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>.
 
 If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
 
@@ -71,7 +71,7 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 👉 **Automated Cron Jobs**: Utilize cron jobs to automate periodic scraping, ensuring data is up-to-date.
 
-and many more, including code architecture and reusability 
+and many more, including code architecture and reusability
 
 ## <a name="quick-start">🤸 Quick Start</a>
 
@@ -319,19 +319,20 @@ export async function generateEmailBody(
 
 @layer utilities {
   .btn {
-    @apply py-4 px-4 bg-secondary hover:bg-opacity-70 rounded-[30px] text-white text-lg font-semibold;
+    @apply py-4 px-4 bg-["#282828"] hover:bg-black/70 rounded-[30px] text-white text-lg font-semibold;
   }
+
 
   .head-text {
     @apply mt-4 text-6xl leading-[72px] font-bold tracking-[-1.2px] text-gray-900;
   }
 
   .section-text {
-    @apply text-secondary text-[32px] font-semibold;
+    @apply text-["#282828"] text-[32px] font-semibold;
   }
 
   .small-text {
-    @apply flex gap-2 text-sm font-medium text-primary;
+    @apply flex gap-2 text-sm font-medium;
   }
 
   .paragraph-text {
@@ -347,15 +348,15 @@ export async function generateEmailBody(
   }
 
   .carousel .control-dots {
-    @apply static !important;
+    @apply static;
   }
 
   .carousel .control-dots .dot {
-    @apply w-[10px] h-[10px] bg-[#D9D9D9] rounded-full bottom-0 !important;
+    @apply w-[10px] h-[10px] bg-[#D9D9D9] rounded-full bottom-0;
   }
 
   .carousel .control-dots .dot.selected {
-    @apply bg-[#475467] !important;
+    @apply bg-[#475467];
   }
 
   .trending-section {
@@ -376,7 +377,7 @@ export async function generateEmailBody(
   }
 
   .product-hearts {
-    @apply flex items-center gap-2 px-3 py-2 bg-[#FFF0F0] rounded-10;
+    @apply flex items-center gap-2 px-3 py-2 bg-[#FFF0F0] rounded-md;
   }
 
   .product-stars {
@@ -384,12 +385,12 @@ export async function generateEmailBody(
   }
 
   .product-reviews {
-    @apply flex items-center gap-2 px-3 py-2 bg-white-200 rounded-[27px];
+    @apply flex items-center gap-2 px-3 py-2 bg-white rounded-[27px];
   }
 
   /* MODAL */
   .dialog-container {
-    @apply fixed inset-0 z-10 overflow-y-auto bg-black bg-opacity-60;
+    @apply fixed inset-0 z-10 overflow-y-auto bg-black bg-black/7;
   }
 
   .dialog-content {
@@ -397,7 +398,7 @@ export async function generateEmailBody(
   }
 
   .dialog-head_text {
-    @apply text-secondary text-lg leading-[24px] font-semibold mt-4;
+    @apply text- text-lg leading-[24px] font-semibold mt-4;
   }
 
   .dialog-input_container {
@@ -409,7 +410,7 @@ export async function generateEmailBody(
   }
 
   .dialog-btn {
-    @apply px-5 py-3 text-white text-base font-semibold border border-secondary bg-secondary rounded-lg mt-8;
+    @apply px-5 py-3 text-white text-base font-semibold border bg-["#282828"] bg-["#282828"] rounded-lg mt-8;
   }
 
   /* NAVBAR */
@@ -418,12 +419,12 @@ export async function generateEmailBody(
   }
 
   .nav-logo {
-    @apply font-spaceGrotesk text-[21px] text-secondary font-bold;
+    @apply  text-[21px] text-["#282828"] font-bold;
   }
 
   /* PRICE INFO */
   .price-info_card {
-    @apply flex-1 min-w-[200px] flex flex-col gap-2 border-l-[3px] rounded-10 bg-white-100 px-5 py-4;
+    @apply flex-1 min-w-[200px] flex flex-col gap-2 border-l-[3px] rounded-md bg-white px-5 py-4;
   }
 
   /* PRODUCT CARD */
@@ -440,7 +441,7 @@ export async function generateEmailBody(
   }
 
   .product-title {
-    @apply text-secondary text-xl leading-6 font-semibold truncate;
+    @apply text-["#282828"] text-xl leading-6 font-semibold truncate;
   }
 
   /* SEARCHBAR INPUT */
@@ -508,8 +509,8 @@ export async function scrapeAmazonProduct(url: string) {
 
     const outOfStock = $('#availability span').text().trim().toLowerCase() === 'currently unavailable';
 
-    const images = 
-      $('#imgBlkFront').attr('data-a-dynamic-image') || 
+    const images =
+      $('#imgBlkFront').attr('data-a-dynamic-image') ||
       $('#landingImage').attr('data-a-dynamic-image') ||
       '{}'
 
@@ -696,11 +697,11 @@ export function extractPrice(...elements: any) {
     if(priceText) {
       const cleanPrice = priceText.replace(/[^\d.]/g, '');
 
-      let firstPrice; 
+      let firstPrice;
 
       if (cleanPrice) {
         firstPrice = cleanPrice.match(/\d+\.\d{2}/)?.[0];
-      } 
+      }
 
       return firstPrice || cleanPrice;
     }

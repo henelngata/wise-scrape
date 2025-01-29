@@ -1,3 +1,4 @@
+
 import HeroCarousel from "@/components/HeroCarousel"
 import Searchbar from "@/components/Searchbar"
 import Image from "next/image"
@@ -9,12 +10,12 @@ const Home = async () => {
 
   return (
     <>
-      <section className="px-6 md:px-20 py-24">
+      <section className="px-6 md:px-10 py10">
         <div className="flex max-xl:flex-col gap-16">
-          <div className="flex flex-col justify-center"> 
+          <div className="flex flex-col justify-center">
             <p className="small-text">
               Smart Shopping Starts Here:
-              <Image 
+              <Image
                 src="/assets/icons/arrow-right.svg"
                 alt="arrow-right"
                 width={16}
@@ -24,7 +25,7 @@ const Home = async () => {
 
             <h1 className="head-text">
               Unleash the Power of
-              <span className="text-primary"> PriceWise</span>
+              <span className="text-my-red"> PriceWise</span>
             </h1>
 
             <p className="mt-6">

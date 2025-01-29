@@ -1,6 +1,6 @@
 "use client"
 
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import Image from "next/image";
 
@@ -17,14 +17,14 @@ const HeroCarousel = () => {
     <div className="hero-carousel">
       <Carousel
         showThumbs={false}
-        // autoPlay
-        infiniteLoop
-        // interval={2000}
+         autoPlay
+        //infiniteLoop
+        //interval={2000}
         showArrows={false}
         showStatus={false}
       >
         {heroImages.map((image) => (
-          <Image 
+          <Image
             src={image.imgUrl}
             alt={image.alt}
             width={484}
@@ -35,7 +35,7 @@ const HeroCarousel = () => {
         ))}
       </Carousel>
 
-      <Image 
+      <Image
         src="assets/icons/hand-drawn-arrow.svg"
         alt="arrow"
         width={175}

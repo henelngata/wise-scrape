@@ -12,7 +12,7 @@ const Navbar = () => {
     <header className="w-full">
       <nav className="nav">
         <Link href="/" className="flex items-center gap-1">
-          <Image 
+          <Image
             src="/assets/icons/logo.svg"
             width={27}
             height={27}
@@ -20,13 +20,13 @@ const Navbar = () => {
           />
 
           <p className="nav-logo">
-            Price<span className='text-primary'>Wise</span>
+            Price<span className='text-my-red'>Wise</span>
           </p>
         </Link>
 
         <div className="flex items-center gap-5">
           {navIcons.map((icon) => (
-            <Image 
+            <Image
               key={icon.alt}
               src={icon.src}
               alt={icon.alt}

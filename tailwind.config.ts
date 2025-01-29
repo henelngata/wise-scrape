@@ -8,12 +8,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'amber-accent': '#D48D3B',
+        'forest-green': '#3E9242',
+        'my-red': '#E43030',
         primary: {
           DEFAULT: "#E43030",
           orange: "#D48D3B",
           green: "#3E9242",
         },
-        secondary: "#282828",
+        sec: "#282828",
+
         gray: {
           200: "#EAECF0",
           300: "#D0D5DD",
